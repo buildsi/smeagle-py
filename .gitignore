@@ -1,0 +1,8 @@
+example/math-client
+smeagle.egg-info
+*.so
+env
+.eggs
+dist/
+examples
+__pycache__
