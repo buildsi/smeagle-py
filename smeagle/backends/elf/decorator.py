@@ -1,7 +1,3 @@
-__author__ = "Vanessa Sochat"
-__copyright__ = "Copyright The ORAS Authors."
-__license__ = "Apache-2.0"
-
 from functools import partial, update_wrapper
 
 
