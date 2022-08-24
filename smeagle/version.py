@@ -1,4 +1,4 @@
-__version__ = "0.0.11"
+__version__ = "0.0.12s"
 AUTHOR = "Vanessa Sochat"
 EMAIL = "vsoch@users.noreply.github.com"
 NAME = "smeagle"
@@ -13,7 +13,6 @@ LICENSE = "LICENSE"
 # Since we assume wanting Singularity and lmod, we require spython and Jinja2
 
 INSTALL_REQUIRES = (
-    ("jsonschema", {"min_version": None}),
     ("cle", {"min_version": None}),
     ("pyelftools", {"min_version": None}),
 )
