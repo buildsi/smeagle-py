@@ -153,12 +153,31 @@ $ python dev.py example/libmath-v1.so
 }
 ```
 
-### Authors
+## Tests
+
+The test cases are stored in an external repository, so they can be shared. You can
+run tests as follows:
+
+```bash
+git clone https://github.com/buildsi/smeagle-examples ./tests/examples
+
+# Install extra test deps (assuming smeagle already installed, as shown above)
+pip install pytest deepdiff
+cd tests/
+
+# Compile tests with a consistent compiler
+docker run -t -v $PWD:/code gcc:12.1 bash -c "cd /code && make"
+
+# Run tests
+pytest -xs test_examples.py
+```
+
+## Authors
 
  - [@vsoch](https://github.com/vsoch)
  - [@hainest](https://github.com/hainest)
 
-### License
+## License
 
 This project is part of Spack. Spack is distributed under the terms of both the MIT license and the Apache License (Version 2.0). Users may choose either license, at their option.
 
