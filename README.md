@@ -1,5 +1,8 @@
 # Smeagle Python
 
+[![PyPI version](https://badge.fury.io/py/smeagle.svg)](https://badge.fury.io/py/smeagle)
+[![ELF ABI Parsing Basic Tests](https://github.com/buildsi/smeagle-py/actions/workflows/basic-tests.yaml/badge.svg)](https://github.com/buildsi/smeagle-py/actions/workflows/basic-tests.yaml)
+
 Generate facts for ELF binaries with debug information.
 
 ## Usage
