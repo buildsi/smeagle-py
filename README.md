@@ -12,6 +12,12 @@ $ source env/bin/activate
 $ pip install -e .
 ```
 
+Or you can install the latest release from pypi:
+
+```bash
+$ pip install smeagle
+```
+
 If you need a quick binary with debug, compile the example:
 
 ```bash
