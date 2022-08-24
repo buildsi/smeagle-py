@@ -5,7 +5,12 @@ import logging
 import re
 import sys
 
-from elftools.common.utils import bytes2str
+# https://github.com/eliben/pyelftools/commit/01621ab86337104aafebc7eaf1ed7c7f5c16d1f7
+try:
+    from elftools.common.utils import bytes2str
+except:
+    from elftools.common.utils.py3compat import bytes2str
+
 from elftools.dwarf.locationlists import LocationEntry, LocationExpr
 
 from ..corpus import Corpus

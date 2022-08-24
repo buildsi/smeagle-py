@@ -1,7 +1,4 @@
 import json
-import logging
-
-l = logging.getLogger(name=__name__)
 
 
 class Corpus:
