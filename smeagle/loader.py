@@ -17,11 +17,17 @@ class Loader(Loader):
 
     @property
     def corpus(self):
+        """
+        Return the main object corpus, currently only supported for ELF.
+        """
         if hasattr(self.main_object, "corpus"):
             return self.main_object.corpus
         raise ValueError("No corpus available.")
 
     def _static_backend(self, spec, ignore_hints=False):
+        """
+        Wrapper to static backend to use custom ALL_BACKENDS
+        """
         if not ignore_hints:
             for ident in self._possible_idents(spec):
                 try:
@@ -36,6 +42,9 @@ class Loader(Loader):
 
     @staticmethod
     def _backend_resolver(backend, default=None):
+        """
+        Wrapper to backend resolver to use custom ALL_BACKENDS
+        """
         if isinstance(backend, type) and issubclass(backend, Backend):
             return backend
         elif backend in ALL_BACKENDS:

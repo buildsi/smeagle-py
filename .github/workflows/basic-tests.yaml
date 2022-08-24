@@ -1,0 +1,21 @@
+name: ELF ABI Parsing Basic Tests
+on: 
+  pull_request: []
+
+jobs:
+  test-basic:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3        
+    - name: Clone Examples
+      run: git clone https://github.com/buildsi/smeagle-examples ./tests/examples
+    - name: Install Library
+      run: |
+        pip install -e .[all]
+        pip install pytest deepdiff
+         
+    - name: Run Examples
+      run: |
+        cd tests/
+        docker run -t -v $PWD:/code gcc:12.1 bash -c "cd /code && make"
+        pytest -xs test_examples.py
