@@ -9,7 +9,7 @@ import sys
 try:
     from elftools.common.utils import bytes2str
 except:
-    from elftools.common.utils.py3compat import bytes2str
+    from elftools.common.py3compat import bytes2str
 
 from elftools.dwarf.locationlists import LocationEntry, LocationExpr
 
